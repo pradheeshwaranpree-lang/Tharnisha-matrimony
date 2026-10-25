@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tharnisha Matrimony</title>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mukta:wght@400;500;700&family=Noto+Serif+Tamil:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8ec;--surface:#fffdf8;--ink:#2b1216;--muted:#6f5a52;--maroon:#7a1230;--gold:#c8922a;--line:#ecd9bd;--leaf:#2f6b4f;--hero:#5e0d25;--herotext:#fff3dc;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1d0f13;--surface:#2a171c;--ink:#f6e8d6;--muted:#c4aa98;--maroon:#e0627f;--gold:#e0ac4c;--line:#4a2a32;--leaf:#6fc59a;--hero:#3d0a1a;--herotext:#fff3dc;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1d0f13;--surface:#2a171c;--ink:#f6e8d6;--muted:#c4aa98;--maroon:#e0627f;--gold:#e0ac4c;--line:#4a2a32;--leaf:#6fc59a;--hero:#3d0a1a;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 Mukta,system-ui,sans-serif}
+h1,h2,h3{font-family:Marcellus,Georgia,serif;font-weight:400;line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+header.nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px clamp(16px,5vw,56px);background:var(--hero);color:var(--herotext)}
+.logo{font-family:Marcellus,serif;font-size:1.5rem;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffd98a,var(--gold));display:inline-block;position:relative}
+.logo i:before,.logo i:after{content:"";position:absolute;top:50%;width:14px;height:14px;border:2px solid var(--hero);border-radius:50%;transform:translateY(-50%)}
+.logo i:before{left:3px}.logo i:after{right:3px}
+nav a{margin-left:18px;text-decoration:none;font-size:.95rem;opacity:.9}
+nav a:hover{opacity:1;text-decoration:underline}
+.btn{background:var(--gold);color:#2b1216;border:0;border-radius:6px;padding:11px 20px;font:700 1rem Mukta,sans-serif;cursor:pointer;text-decoration:none;display:inline-block}
+.btn:hover{filter:brightness(1.07)}
+.btn.line{background:transparent;color:var(--maroon);border:1.5px solid var(--maroon)}
+.hero{background:var(--hero);color:var(--herotext);padding:clamp(36px,7vw,84px) clamp(16px,5vw,56px) 0;position:relative;overflow:hidden}
+.hero-in{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.hero .ta{font-family:'Noto Serif Tamil',serif;color:var(--gold);font-size:1.15rem;margin:0 0 10px}
+.hero h1{font-size:clamp(2.2rem,5.5vw,4rem)}
+.hero p.lead{max-width:46ch;opacity:.92;font-size:1.1rem;margin:16px 0 0}
+.garland{display:flex;justify-content:center;align-items:flex-end;height:230px}
+.garland svg{width:100%;max-width:340px}
+.search{max-width:1100px;margin:36px auto 0;background:var(--surface);color:var(--ink);border-radius:14px 14px 0 0;padding:22px;display:grid;grid-template-columns:repeat(4,1fr) auto;gap:14px;align-items:end;box-shadow:0 -6px 30px rgba(0,0,0,.18)}
+label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:4px}
+select,input,textarea{width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+section{padding:clamp(40px,6vw,76px) clamp(16px,5vw,56px)}
+.wrap{max-width:1100px;margin:auto}
+.head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.head h2{font-size:clamp(1.7rem,3.5vw,2.4rem)}
+.head p{margin:6px 0 0;color:var(--muted)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tab{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);padding:7px 16px;border-radius:99px;font:500 .95rem Mukta,sans-serif;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--maroon);border-color:var(--maroon);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.ph{height:150px;display:grid;place-items:center;font:2.6rem Marcellus,serif;color:#fff;position:relative}
+.ph small{position:absolute;left:10px;top:10px;font:700 .72rem Mukta,sans-serif;background:rgba(255,255,255,.92);color:var(--leaf);padding:2px 8px;border-radius:99px}
+.ph svg,.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ph small{z-index:1}
+.up{margin-top:34px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;align-items:end}
+.up h3{grid-column:1/-1;font-size:1.3rem}
+.up p{grid-column:1/-1;margin:-6px 0 0;color:var(--muted);font-size:.93rem}
+.cb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;flex:1}
+.cb h3{font-size:1.25rem}
+.cb .m{color:var(--muted);font-size:.93rem}
+.cb .row{display:flex;gap:8px;margin-top:auto;padding-top:12px}
+.cb .row button{flex:1;padding:8px 6px;font-size:.92rem}
+.empty{padding:40px;text-align:center;color:var(--muted);border:1.5px dashed var(--line);border-radius:10px}
+.how{background:var(--surface);border-block:1px solid var(--line)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;counter-reset:s}
+.steps div{counter-increment:s;padding-top:14px;border-top:3px solid var(--gold)}
+.steps div:before{content:"Step " counter(s);color:var(--maroon);font-weight:700;font-size:.9rem}
+.steps h3{font-size:1.2rem;margin:4px 0 6px}
+.steps p{margin:0;color:var(--muted);font-size:.95rem}
+.stories{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+blockquote{margin:0;background:var(--surface);border-left:4px solid var(--maroon);padding:18px 20px;border-radius:0 10px 10px 0}
+blockquote footer{margin-top:10px;color:var(--muted);font-size:.9rem}
+.reg{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start}
+form.f{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form.f .full{grid-column:1/-1}
+.perks{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.perks li{padding-left:28px;position:relative}
+.perks li:before{content:"✓";position:absolute;left:0;color:var(--leaf);font-weight:700}
+footer.ft{background:var(--hero);color:var(--herotext);padding:30px clamp(16px,5vw,56px);text-align:center;font-size:.92rem}
+footer.ft p{margin:4px 0;opacity:.85}
+dialog{border:0;border-radius:14px;padding:0;max-width:440px;width:calc(100% - 32px);background:var(--surface);color:var(--ink)}
+dialog::backdrop{background:rgba(30,8,14,.6)}
+.dl .ph{height:130px}.dl .b{padding:18px 22px 22px}
+.dl dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:12px 0}
+.dl dt{color:var(--muted)}.dl dd{margin:0}
+#toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--leaf);color:#fff;padding:12px 20px;border-radius:8px;opacity:0;transition:.3s;pointer-events:none;z-index:20;max-width:90%}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media (max-width:860px){.hero-in,.reg{grid-template-columns:1fr}.garland{display:none}.search{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}nav a:not(.btn){display:none}}
+@media (max-width:520px){.search,.steps,form.f{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#top"><i></i>Tharnisha Matrimony</a>
+  <nav><a href="#profiles">Profiles</a><a href="#how">How it works</a><a href="#stories">Stories</a> <a class="btn" href="#join">Register free</a></nav>
+</header>
+
+<div class="hero" id="top">
+  <div class="hero-in">
+    <div>
+      <p class="ta">தர்னிஷா மேட்ரிமோனி</p>
+      <h1>Find the one you will walk seven steps with.</h1>
+      <p class="lead">Verified Tamil families, horoscope matching and private conversations. Built for people who want a marriage, not just a match.</p>
+    </div>
+    <div class="garland" aria-hidden="true">
+      <svg viewBox="0 0 340 230"><g fill="none" stroke="#c8922a" stroke-width="3"><path d="M30 20 Q170 190 310 20"/></g>
+      <g fill="#ffd98a"><circle cx="50" cy="52" r="9"/><circle cx="78" cy="86" r="9"/><circle cx="110" cy="112" r="9"/><circle cx="145" cy="128" r="9"/><circle cx="170" cy="132" r="10" fill="#fff3dc"/><circle cx="195" cy="128" r="9"/><circle cx="230" cy="112" r="9"/><circle cx="262" cy="86" r="9"/><circle cx="290" cy="52" r="9"/></g>
+      <g fill="#e0627f"><circle cx="64" cy="70" r="7"/><circle cx="94" cy="100" r="7"/><circle cx="127" cy="121" r="7"/><circle cx="213" cy="121" r="7"/><circle cx="246" cy="100" r="7"/><circle cx="276" cy="70" r="7"/></g></svg>
+    </div>
+  </div>
+  <form class="search" id="sf" onsubmit="return false">
+    <div><label for="fg">I am looking for</label><select id="fg"><option value="">Bride or groom</option><option value="Bride">Bride</option><option value="Groom">Groom</option></select></div>
+    <div><label for="fa">Age</label><select id="fa"><option value="">Any</option><option value="18-25">21 to 25</option><option value="26-30">26 to 30</option><option value="31-45">31 and above</option></select></div>
+    <div><label for="fc">City</label><select id="fc"><option value="">Any city</option></select></div>
+    <div><label for="fe">Education</label><select id="fe"><option value="">Any</option><option>Engineer</option><option>Doctor</option><option>Teacher</option><option>Business</option><option>Designer</option></select></div>
+    <button class="btn" id="go" type="button">Search</button>
+  </form>
+</div>
+
+<section id="profiles">
+  <div class="wrap">
+    <div class="head">
+      <div><h2>Featured profiles</h2><p id="count"></p></div>
+      <div class="tabs" role="group" aria-label="Filter profiles">
+        <button class="tab" aria-pressed="true" data-g="">All</button>
+        <button class="tab" aria-pressed="false" data-g="Bride">Brides</button>
+        <button class="tab" aria-pressed="false" data-g="Groom">Grooms</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p style="color:var(--muted);font-size:.88rem;margin-top:18px">Sample profiles shown for this demo. Names and details are fictional, and the portraits are illustrations.</p>
+    <form class="up" id="uf" onsubmit="return false">
+      <h3>Add your own profile with a photo</h3>
+      <p>Upload only your own photo, or one you have permission to use. It stays in your browser and is not saved or shared.</p>
+      <div><label for="un">Name</label><input id="un" required></div>
+      <div><label for="ug">Profile type</label><select id="ug"><option>Bride</option><option>Groom</option></select></div>
+      <div><label for="ua">Age</label><input id="ua" type="number" min="18" max="70" required></div>
+      <div><label for="uc">City</label><input id="uc" required></div>
+      <div><label for="up">Photo</label><input id="up" type="file" accept="image/*" required></div>
+      <div><button class="btn" id="ub" type="button" style="width:100%">Add profile</button></div>
+    </form>
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="head"><h2>Four steps to a proposal</h2></div>
+    <div class="steps">
+      <div><h3>Create your profile</h3><p>Add your education, family, star and rasi in about five minutes.</p></div>
+      <div><h3>Get verified</h3><p>We check phone and ID so every profile belongs to a real person.</p></div>
+      <div><h3>Match by horoscope</h3><p>See porutham scores before you send an interest.</p></div>
+      <div><h3>Meet with family</h3><p>Chat privately, then share contact details when both sides agree.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="stories">
+  <div class="wrap">
+    <div class="head"><h2>Happy families</h2></div>
+    <div class="stories">
+      <blockquote>We both wanted a simple wedding in Madurai. The filters helped us find each other in two weeks.<footer>Karthik and Meenakshi, Madurai</footer></blockquote>
+      <blockquote>My parents trusted the verified badge. The porutham score started a good first conversation.<footer>Aravind and Divya, Coimbatore</footer></blockquote>
+      <blockquote>I live abroad and wanted a match who understood home. Private chat made it easy.<footer>Nithya and Suresh, Chennai</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="how" id="join">
+  <div class="wrap reg">
+    <div>
+      <h2 style="font-size:clamp(1.8rem,3.5vw,2.5rem)">Register free today</h2>
+      <p style="color:var(--muted)">Browse for free. Pay only when you want to contact matches directly.</p>
+      <ul class="perks"><li>Only verified profiles in search results</li><li>Horoscope matching in Tamil and English</li><li>Hide your photo from people you do not approve</li><li>Family members can manage a profile together</li></ul>
+    </div>
+    <form class="f" id="rf" onsubmit="return false">
+      <div class="full"><label for="rn">Full name</label><input id="rn" required autocomplete="name"></div>
+      <div><label for="rg">Profile for</label><select id="rg"><option>Myself</option><option>Son</option><option>Daughter</option><option>Brother</option><option>Sister</option></select></div>
+      <div><label for="ra">Age</label><input id="ra" type="number" min="18" max="70" required></div>
+      <div><label for="rm">Mobile number</label><input id="rm" type="tel" required autocomplete="tel"></div>
+      <div><label for="rc">City</label><input id="rc" autocomplete="address-level2"></div>
+      <div class="full"><button class="btn" id="rb" type="button" style="width:100%">Create my profile</button></div>
+    </form>
+  </div>
+</section>
+
+<footer class="ft">
+  <p><strong>Tharnisha Matrimony</strong> · தர்னிஷா மேட்ரிமோனி</p>
+  <p>Demo website. Sample profiles are fictional and no real data is collected.</p>
+</footer>
+
+<dialog id="dlg"><div class="dl" id="dbody"></div></dialog>
+<div id="toast" role="status"></div>
+
+<script>
+var P=[
+["Ananya Raghavan","Bride",26,"Chennai","Engineer","Software engineer at a product firm. Loves Carnatic music and filter coffee.","Pooram","Simmam","#7a1230",1],
+["Kavin Muthusamy","Groom",29,"Coimbatore","Business","Runs a family textile business. Enjoys cricket and weekend trekking.","Anusham","Viruchigam","#2f6b4f",1],
+["Meera Subramanian","Bride",24,"Madurai","Doctor","Final year MD resident. Wants a partner who respects her work.","Rohini","Rishabam","#a2552b",1],
+["Arjun Venkatesh","Groom",31,"Chennai","Engineer","Mechanical engineer in Oragadam. Vegetarian, family oriented.","Hastham","Kanni","#3a4f8c",1],
+["Lakshmi Priya","Bride",28,"Trichy","Teacher","College lecturer who paints kolam designs and teaches Bharatanatyam.","Uthiram","Kanni","#8a3b6e",0],
+["Siddharth Anand","Groom",27,"Salem","Designer","UX designer. Photographer, film buff and a great cook.","Swathi","Thulam","#1f6f78",1],
+["Harini Selvam","Bride",31,"Tirunelveli","Business","Runs her own bakery. Looking for a supportive and humorous partner.","Makam","Simmam","#b0462f",1],
+["Prakash Kumar","Groom",33,"Chennai","Doctor","Orthopaedic surgeon. Calm, travels often and loves reading.","Bharani","Mesham","#4a3b8f",1],
+["Divya Bharathi","Bride",25,"Coimbatore","Designer","Interior designer. Enjoys plants, pottery and long drives.","Revathi","Meenam","#2f6b4f",0],
+["Vignesh Ravi","Groom",25,"Madurai","Teacher","School teacher and state level chess player. Soft spoken.","Thiruvonam","Magaram","#a2552b",1],
+["Sowmya Narayanan","Bride",35,"Chennai","Engineer","Data architect, divorced, no children. Seeks a mature and kind partner.","Pushyam","Kadagam","#7a1230",1],
+["Naveen Karthikeyan","Groom",36,"Trichy","Business","Owns an agro export company. Widower, one daughter, values family.","Aayilyam","Kadagam","#3a4f8c",1]
+];
+var $=function(i){return document.getElementById(i)};
+var cities=[...new Set(P.map(function(p){return p[3]}))].sort();
+cities.forEach(function(c){var o=document.createElement("option");o.textContent=c;$("fc").appendChild(o)});
+var tab="";
+function ageOk(a,r){if(!r)return true;var s=r.split("-");return a>=+s[0]&&a<=+s[1]}
+function pic(p){
+ if(p[10])return '<img alt="Photo of '+p[0]+'" src="'+p[10]+'">';
+ var i=P.indexOf(p),sk=['#c58b63','#a8693f','#d9a77c','#8d5532'][i%4],b=p[1]==='Bride',h='#1b0f12';
+ var s='<svg viewBox="0 0 100 100" role="img" aria-label="Illustrated avatar of '+p[0]+'" preserveAspectRatio="xMidYMid slice"><rect width="100" height="100" fill="'+p[8]+'"/><circle cx="50" cy="52" r="44" fill="rgba(255,255,255,.14)"/>';
+ if(b)s+='<path d="M24 62Q20 20 50 18Q80 20 76 62L78 92H22Z" fill="'+h+'"/>';
+ s+='<path d="M12 100Q16 72 50 70Q84 72 88 100Z" fill="'+(b?'#f1c15a':'#f6ead2')+'"/>';
+ if(b)s+='<path d="M12 100Q16 72 50 70L50 100Z" fill="#b5124a" opacity=".9"/><path d="M28 80Q50 94 72 80" stroke="#fff3dc" stroke-width="2.5" fill="none"/>';
+ else s+='<path d="M40 70L50 84L60 70" stroke="#c8922a" stroke-width="3" fill="none"/>';
+ s+='<rect x="44" y="58" width="12" height="16" fill="'+sk+'"/><ellipse cx="50" cy="44" rx="19" ry="22" fill="'+sk+'"/>';
+ if(b)s+='<path d="M31 42Q33 21 50 21Q67 21 69 42Q58 31 50 31Q42 31 31 42Z" fill="'+h+'"/><circle cx="50" cy="37" r="2" fill="#d6204f"/><circle cx="68" cy="34" r="3.2" fill="#fff"/><circle cx="71" cy="41" r="3.2" fill="#fff"/><circle cx="72" cy="48" r="3.2" fill="#fff"/><circle cx="50" cy="37" r="2" fill="#d6204f"/>';
+ else s+='<path d="M30 42Q27 19 50 19Q73 19 70 42Q62 29 50 30Q38 29 30 42Z" fill="'+h+'"/><path d="M43 55Q50 52 57 55" stroke="'+h+'" stroke-width="2.5" fill="none"/>';
+ s+='<circle cx="43" cy="45" r="1.9" fill="'+h+'"/><circle cx="57" cy="45" r="1.9" fill="'+h+'"/><path d="M44 58Q50 63 56 58" stroke="#6b2b2b" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>';
+ return s}
+function ini(n){return n.split(" ").map(function(w){return w[0]}).slice(0,2).join("")}
+function render(){
+  var g=$("fg").value||tab,a=$("fa").value,c=$("fc").value,e=$("fe").value;
+  var list=P.filter(function(p,i){p.i=i;return(!g||p[1]===g)&&ageOk(p[2],a)&&(!c||p[3]===c)&&(!e||p[4]===e)});
+  $("count").textContent=list.length+" profile"+(list.length==1?"":"s")+" found";
+  $("grid").innerHTML=list.length?list.map(function(p){return '<article class="card"><div class="ph" style="background:'+p[8]+'">'+pic(p)+(p[9]?'<small>Verified</small>':'')+'</div><div class="cb"><h3>'+p[0]+'</h3><div class="m">'+p[2]+' yrs · '+p[3]+'</div><div class="m">'+p[4]+'</div><div class="row"><button class="btn line" data-v="'+p.i+'">View</button><button class="btn" data-s="'+p.i+'">Send interest</button></div></div></article>'}).join(""):'<div class="empty">No profiles match these filters. Try a wider age range or another city.</div>';
+}
+function toast(t){var x=$("toast");x.textContent=t;x.className="on";clearTimeout(toast.t);toast.t=setTimeout(function(){x.className=""},2600)}
+function view(i){var p=P[i];$("dbody").innerHTML='<div class="ph" style="background:'+p[8]+'">'+pic(p)+'</div><div class="b"><h3 style="font-size:1.5rem">'+p[0]+'</h3><p style="margin:4px 0;color:var(--muted)">'+p[5]+'</p><dl><dt>Age</dt><dd>'+p[2]+'</dd><dt>City</dt><dd>'+p[3]+'</dd><dt>Profession</dt><dd>'+p[4]+'</dd><dt>Star</dt><dd>'+p[6]+'</dd><dt>Rasi</dt><dd>'+p[7]+'</dd></dl><div style="display:flex;gap:10px"><button class="btn" data-s="'+i+'">Send interest</button><button class="btn line" id="cl">Close</button></div></div>';$("dlg").showModal()}
+document.addEventListener("click",function(ev){
+  var t=ev.target;
+  if(t.dataset.v)view(+t.dataset.v);
+  if(t.dataset.s){$("dlg").open&&$("dlg").close();toast("Interest sent to "+P[+t.dataset.s][0]+". You will be notified when they reply.")}
+  if(t.id==="cl")$("dlg").close();
+  if(t.classList.contains("tab")){tab=t.dataset.g;$("fg").value="";document.querySelectorAll(".tab").forEach(function(b){b.setAttribute("aria-pressed",b===t)});render()}
+});
+$("dlg").addEventListener("click",function(e){if(e.target===this)this.close()});
+$("go").onclick=function(){var g=$("fg").value;tab=g;document.querySelectorAll(".tab").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.g===g)});render();$("profiles").scrollIntoView()};
+$("rb").onclick=function(){var f=$("rf");if(!f.reportValidity())return;toast("Welcome, "+$("rn").value+". Your profile is created.");f.reset()};
+$("ub").onclick=function(){var f=$("uf");if(!f.reportValidity())return;var file=$("up").files[0];if(file.size>5e6){toast("Choose a photo under 5 MB.");return}
+var r=new FileReader();r.onload=function(){P.unshift([$("un").value,$("ug").value,+$("ua").value,$("uc").value,"New member","New member on Tharnisha Matrimony.","Not added","Not added","#7a1230",0,r.result]);tab="";$("fg").value="";$("fa").value="";$("fc").value="";$("fe").value="";document.querySelectorAll(".tab").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.g==="")});render();f.reset();toast("Profile added at the top of the list.");$("grid").scrollIntoView({block:"center"})};r.readAsDataURL(file)};
+render();
+</script>
+</body>
+</html>
